@@ -11,13 +11,13 @@
   </head>
 
   <body>
-  <%= render "shared/navbar" %>
+    <%= render "shared/navbar" %>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <%= render "shared/flashes" %>
+
     <%= yield %>
     <% if user_signed_in?  %>
-    <h2>Hi <%= currenr_user.email %></h2>
+    <h5>Hi <%= current_user.email %></h5>
     <% end %>
   </body>
 </html>
