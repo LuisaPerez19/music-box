@@ -1,31 +1,28 @@
 class InstrumentsController < ApplicationController
-<<<<<<< HEAD
-end
-=======
-  def index
+
+    def index
     @instruments = Instrument.all
-  end
+    end
 
-  #show method
+    #show method
 
-  def new
+    def new
     @instrument = Instrument.new
-  end
+    end
 
-  def create
+    def create
     @instrument = Instrument.new(instrument_params)
     if @instrument.save
-      redirect_to instrument_path(@instrument)
+        redirect_to instrument_path(@instrument)
     else
-      render 'new', status: :unprocessable_entity
+        render 'new', status: :unprocessable_entity
     end
-  end
+    end
 
 
-  private
+    private
 
-  def instrument_params
+    def instrument_params
     params.require(:instrument).permit(:name)
-  end
+    end
 end
->>>>>>> 7cfe4fc3f613149171027bdd85f9895ba488a3da
