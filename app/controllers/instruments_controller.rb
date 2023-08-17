@@ -6,7 +6,7 @@ class InstrumentsController < ApplicationController
 
     def new
         @instrument = Instrument.new
-        end
+    end
 
     def show
         @instrument = Instrument.find(params[:id])
@@ -20,7 +20,7 @@ class InstrumentsController < ApplicationController
         @instrument = Instrument.find(params[:id])
         if @instrument.update(instrument_params)
             redirect_to instrument_path(@instrument)
-        else 
+        else
         render edit
         end
     end
@@ -49,4 +49,3 @@ class InstrumentsController < ApplicationController
     params.require(:instrument).permit(:name,:price,:description,:photo_url,:category)
     end
 end
-
