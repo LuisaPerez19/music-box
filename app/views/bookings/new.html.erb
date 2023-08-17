@@ -1,18 +1,18 @@
+<!-- app/views/bookings/new.html.erb -->
+<h1>Instrument Booking</h1>
 
-<%= form_for @booking do |f| %>
-<div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-</div>
+<%= form_with(model: @booking, url: bookings_path, local: true) do |form| %>
+  <%= form.label :user_id, 'User ID:' %>
+  <%= form.collection_select :user_id, User.all, :id, :name, prompt: 'Select a user', required: true %><br><br>
 
-<div class="field">
-    <%= f.label :email %>
-    <%= f.email_field :email %>
-</div>
+  <%= form.label :instrument_id, 'Instrument ID:' %>
+  <%= form.collection_select :instrument_id, Instrument.all, :id, :name, prompt: 'Select an instrument', required: true %><br><br>
 
-<div class="actions">
-    <%= f.submit "Create Booking" %>
-</div>
+  <%= form.label :start_date, 'Start Date:' %>
+  <%= form.date_field :start_date, required: true %><br><br>
+
+  <%= form.label :end_date, 'End Date:' %>
+  <%= form.date_field :end_date, required: true %><br><br>
+
+  <%= form.submit 'Book Instrument' %>
 <% end %>
-
-<%= link_to 'Back to Bookings', bookings_path %>

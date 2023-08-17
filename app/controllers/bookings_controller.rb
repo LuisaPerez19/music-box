@@ -1,20 +1,20 @@
 class BookingsController < ApplicationController
-    def new
+  def new
     @booking = Booking.new
-    end
+  end
 
-    def create
+  def create
     @booking = Booking.new(booking_params)
     if @booking.save
-        redirect_to bookings_path, notice: 'Booking was successfully created.'
+      redirect_to @booking, notice: 'Booking was successfully created.'
     else
-        render :new
+      render :new
     end
-    end
+  end
 
-    private
+  private
 
-    def booking_params
-    params.require(:booking).permit(:name, :email, :other_attributes)
-    end
+  def booking_params
+    params.require(:booking).permit(:user_id, :instrument_id, :start_date, :end_date)
+  end
 end
