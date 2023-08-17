@@ -21,7 +21,7 @@ class InstrumentsController < ApplicationController
         if @instrument.update(instrument_params)
             redirect_to instrument_path(@instrument)
         else
-        render edit
+        render :edit
         end
     end
 

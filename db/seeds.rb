@@ -43,23 +43,25 @@ user4 = User.create!(
 
 instrument1 = Instrument.create!(
   name: "Yamaha piano",
-  description: "Beatiful",
+  description: "Beautiful",
   price: 20,
   category: "pianos",
   user: user1,
+  # photo_url: "/app/assets/images/P.jpeg"
 )
 
 instrument2 = Instrument.create!(
   name: "Steinway Grand Piano",
-  description: "Beatiful",
+  description: "Beautiful",
   price: 100,
   category: "pianos",
   user: user1,
+  photo_url: "https://upload.wikimedia.org/wikipedia/commons/0/01/Steinway_Vienna_002.JPG"
 )
 
 instrument3 = Instrument.create!(
   name: "Electric Guitar",
-  description: "Beatiful",
+  description: "Beautiful",
   price: 15,
   category: "pianos",
   user: user1,
