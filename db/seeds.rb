@@ -45,9 +45,9 @@ instrument1 = Instrument.create!(
   name: "Yamaha piano",
   description: "Beautiful",
   price: 20,
+  photo_url: "piano1.jpeg",
   category: "pianos",
-  user: user1,
-  # photo_url: "/app/assets/images/P.jpeg"
+  user: user1
 )
 
 instrument2 = Instrument.create!(
@@ -55,14 +55,33 @@ instrument2 = Instrument.create!(
   description: "Beautiful",
   price: 100,
   category: "pianos",
-  user: user1,
-  photo_url: "https://upload.wikimedia.org/wikipedia/commons/0/01/Steinway_Vienna_002.JPG"
+  photo_url: "piano2.jpeg",
+  user: user1
 )
 
 instrument3 = Instrument.create!(
-  name: "Electric Guitar",
+  name: "Electric Piano",
   description: "Beautiful",
   price: 15,
   category: "pianos",
-  user: user1,
+  photo_url: "P.jpeg",
+  user: user1
+)
+
+instrument4 = Instrument.create!(
+  name: "Electric Guitar",
+  description: "Beautiful",
+  price: 10,
+  category: "guitars",
+  photo_url: "guitar.jpg",
+  user: user1
+)
+
+instrument4 = Instrument.create!(
+  name: "Violin",
+  description: "Beautiful",
+  price: 10,
+  category: "guitars",
+  photo_url: "Violin.jpg",
+  user: user1
 )
