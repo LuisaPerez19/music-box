@@ -9,8 +9,8 @@
     <% @instruments.each do |instrument|%>
       <div class="co-12 col-sm-6 col-md-4 mb-3">
         <div class="bg-white rounded shadow h-100">
-        <% if instrument.photo_url %>
-          <%= image_tag instrument.photo_url, alt: 'Instrument', class: "instrument-img rounded-top" %>
+        <% if instrument.photos.attached? %>
+          <%= cl_image_tag instrument.photos.first.key, width: 296, crop: :fill, class: "instrument-img" %>
         <% end %>
             <div class="p-3 rounded-bottom d-flex flex-column">
             <%= link_to instrument_path(instrument), class:"text-decoration-none" do %>
