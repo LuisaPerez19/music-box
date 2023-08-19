@@ -1,22 +1,25 @@
+<%= image_tag "musicbox.png", alt: 'logo', class: "rounded-top"%>
 <div class="container py-5">
-<div class="row">
+  <div class="row">
     <div class="col-12 col-md-6 offset-lg-3">
-    <div class="bg-white rounded p-3 shadow">
+      <div class="bg-white rounded p-3 shadow">
         <h3>Create a new listing</h3>
         <div class="row">
-        <div class="col-12">
+          <div class="col-12">
             <%= simple_form_for @instrument do |f| %>
-            <%= f.input :name %>
-            <%= f.input :description %>
-            <%= f.input :price %>
-            <%= f.file_field :photo_url, class: 'form-control' %>
-            <%= f.submit class: "btn btn-primary mt-4" %>
+              <%= f.input :name %>
+              <%= f.input :description %>
+              <%= f.input :price %>
+              <%= f.file_field :photo_url, class: 'form-control' %>
+              <%= f.submit class: "btn btn-primary mt-4", value: "Create a new listing" %>
             <% end %>
-<br>
+            <br>
             <%= link_to 'Back to Instruments', instruments_path, class: 'btn btn-secondary' %>
+          </div>
         </div>
-        </div>
+      </div>
     </div>
-    </div>
+  </div>
+</div>
 </div>
 </div>

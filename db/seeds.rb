@@ -44,7 +44,7 @@ user4 = User.create!(
 instrument1 = Instrument.create!(
   name: "Yamaha piano",
   description: "Beautiful",
-  price: 20,
+  price: 40,
   photo_url: "piano1.jpeg",
   category: "pianos",
   user: user1
@@ -71,7 +71,7 @@ instrument3 = Instrument.create!(
 instrument4 = Instrument.create!(
   name: "Electric Guitar",
   description: "Beautiful",
-  price: 10,
+  price: 50,
   category: "guitars",
   photo_url: "guitar.jpg",
   user: user1
@@ -80,8 +80,53 @@ instrument4 = Instrument.create!(
 instrument4 = Instrument.create!(
   name: "Violin",
   description: "Beautiful",
-  price: 10,
+  price: 30,
   category: "guitars",
   photo_url: "Violin.jpg",
   user: user1
 )
+
+instrument5 = Instrument.create!(
+  name: "Cello",
+  description: "Beautiful",
+  price: 40,
+  category: "cello",
+  photo_url: "cello2.jpg",
+  user: user1
+)
+
+instrument6 = Instrument.create!(
+  name: "Drum",
+  description: "Beautiful",
+  price: 100,
+  category: "cello",
+  photo_url: "drum.jpeg",
+  user: user1
+)
+
+  instrument7 = Instrument.create!(
+    name: "Banjo",
+    description: "Beautiful",
+    price: 20,
+    category: "cello",
+    photo_url: "banjo.jpeg",
+    user: user1
+  )
+
+  instrument8 = Instrument.create!(
+    name: "Saxophone",
+    description: "Beautiful",
+    price: 40,
+    category: "Sa",
+    photo_url: "sax.jpeg",
+    user: user1
+  )
+
+  instrument9 = Instrument.create!(
+    name: "Xylophone",
+    description: "Beautiful",
+    price: 70,
+    category: "Xylophone",
+    photo_url: "xa.jpeg",
+    user: user1
+  )
