@@ -10,13 +10,30 @@
 
 
 <br>
-
+<div class="btn-group btn-group-toggle" data-toggle="buttons" style="margin: 8px">
+  <label class="btn btn-secondary active">
+  <input type="radio" name="options" id="option1" autocomplete="off" checked>
 <%= link_to "Edit", edit_instrument_path(@instrument.id) %>
-<%= link_to "Back to list", instruments_path %>
-<%= link_to "Delete",
+</label>
+
+  <label class="btn btn-secondary">
+    <input type="radio" name="options" id="option2" autocomplete="off">
+    <%= link_to "Back to list", instruments_path %>
+  </label>
+
+    <label class="btn btn-secondary">
+    <input type="radio" name="options" id="option3" autocomplete="off">
+    <%= link_to "Delete",
   instrument_path(@instrument),
   data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
 %>
+
+  </label>
+
+
+
+
+</div>
 </div>
 
 <div class="col-12 col-lg-6">
@@ -39,12 +56,13 @@
 <p>£2.80/day</p>
 </div>
 
-
-
 </div>
 
-
+<button type="button" class="btn btn-success">Rent the instrument
+    <% link_to instruments_path %>
+</button>
 </div>
+
 </div>
 
 </div>
