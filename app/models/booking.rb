@@ -1,6 +1,6 @@
 class Booking < ApplicationRecord
   belongs_to :instrument
   belongs_to :user
-  validate :start_date_in_future
-  validate :end_date_after_start_date
+  validates :start_date, presence: true
+  validates :end_date, presence: true
 end
