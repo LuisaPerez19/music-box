@@ -57,14 +57,14 @@ instrument2 = Instrument.create!(
   category: "pianos",
   photo_url: "piano2.jpeg",
   user: user1
-)
+)ç
 
 instrument3 = Instrument.create!(
   name: "Electric Piano",
   description: "Beautiful",
   price: 15,
   category: "pianos",
-  photo_url: "P.jpeg",
+  photo_url: "electricpiano.png",
   user: user1
 )
 
