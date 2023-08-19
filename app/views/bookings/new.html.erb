@@ -1,8 +1,9 @@
 <!-- app/views/bookings/new.html.erb -->
 <h1>Instrument Booking</h1>
 
-<%= simple_form_for [@instrument, @booking] do |f| %>
+<div><%= simple_form_for [@instrument, @booking] do |f| %>
   <%= f.input :start_date %>
   <%= f.input :end_date %>
   <%= f.submit "Submit Booking", class: "btn btn-primary" %>
 <% end %>
+</div>
