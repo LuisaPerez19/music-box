@@ -1,14 +1,51 @@
 <div class="container mt-5">
-
+<div class="bg-white rounded p-3 shadow" style="min-height: 50vh">
+<div class="row justify-content-center">
+<div class="col-12 col-lg-6">
 <h1><%= @instrument.name %></h1>
- <%= @instrument.photo_url %>
+ <small class="text-muted">£<%= @instrument.price %>/day</small>
+
+
+<%= image_tag @instrument.photo_url, alt: 'Instrument', class: "instrument-img rounded-top" %>
+
+
+<br>
 
 <%= link_to "Edit", edit_instrument_path(@instrument.id) %>
+<%= link_to "Back to list", instruments_path %>
+<%= link_to "Delete",
+  instrument_path(@instrument),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
+</div>
+
+<div class="col-12 col-lg-6">
+<div class="row justify-content-center">
+<p> <%= @instrument.description %>
+<h1> Desription </h1>
+<p>Native Instruments Komplete Kontrol A49 Midi Guitar</p>
+<div class="col-12 col-lg-3">
+<p>Daily</p>
+<p>£7.00/day</p>
+</div>
+
+<div class="col-12 col-lg-3">
+<p>7 Days +</p>
+<p>£4.00/day</p>
+</div>
+
+<div class="col-12 col-lg-3">
+<p>30 Days +</p>
+<p>£2.80/day</p>
+</div>
 
 
- <%= link_to "Back to list", instruments_path %>
 
- <%= link_to instrument_path(@instrument),
-  data: {turbo_method: :delete, turbo_confirm: "Delete #{@instrument.name}?"} %>
+</div>
 
+
+</div>
+</div>
+
+</div>
 </div>

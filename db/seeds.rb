@@ -29,23 +29,59 @@ user2 = User.create!(
   password_confirmation: "123456"
 )
 
+user3 = User.create!(
+  email: "Aaron@myevent.com",
+  password: "123456",
+  password_confirmation: "123456"
+)
+
+user4 = User.create!(
+  email: "Zina@myevent.com",
+  password: "123456",
+  password_confirmation: "123456"
+)
+
 instrument1 = Instrument.create!(
   name: "Yamaha piano",
+  description: "Beautiful",
   price: 20,
-  user: user1,
-  photo_url: 'https://images.squarespace-cdn.com/content/v1/59df6a569f7456e38dea9936/1610944345170-GW0PFB7WGSKXO9IV7NJF/yamaha-min.png?format=2500w'
+  photo_url: "piano1.jpeg",
+  category: "pianos",
+  user: user1
 )
 
 instrument2 = Instrument.create!(
   name: "Steinway Grand Piano",
+  description: "Beautiful",
   price: 100,
-  user: user1,
-  photo_url: 'https://www.steinway.com/.imaging/mte/steinway-us-theme/Large-Rectangle/dam/pianos/Steinway_Grands/model-b/b_room_fma.jpg/jcr:content/model_b_room_landscape.jpg'
+  category: "pianos",
+  photo_url: "piano2.jpeg",
+  user: user1
 )
 
 instrument3 = Instrument.create!(
-  name: "Electric Guitar",
+  name: "Electric Piano",
+  description: "Beautiful",
   price: 15,
-  user: user1,
-  photo_url: 'https://lifeguitars.co.uk/cdn/shop/products/57_515f572c-3fc4-40f4-a306-47b672aef9b6_1024x1024.jpg?v=1655481395'
+  category: "pianos",
+  photo_url: "P.jpeg",
+  user: user1
+)
+
+instrument4 = Instrument.create!(
+  name: "Electric Guitar",
+  description: "Beautiful",
+  price: 10,
+  category: "guitars",
+  photo_url: "guitar.jpg",
+  user: user1
+)
+
+instrument4 = Instrument.create!(
+  name: "Violin",
+  description: "Beautiful",
+  price: 10,
+  category: "guitars",
+  photo_url: "Violin.jpg",
+  user: user1
 )
