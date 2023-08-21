@@ -43,50 +43,26 @@ user4 = User.create!(
   password_confirmation: "123456"
 )
 
-piano_file = URI.open("https://images.unsplash.com/photo-1603584915335-d612257071b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80")
+violin_file = URI.open("https://images.unsplash.com/photo-1631541313073-ffe99712c629?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80")
 
 instrument1 = Instrument.new(
-  name: "Yamaha piano",
+  name: "Violin",
   description: "Beautiful",
   price: 20,
-  category: "pianos",
+  category: "Violins",
   user: user1
 )
-instrument1.photos.attach(io: piano_file, filename: "piano.png", content_type: "image/png")
+instrument1.photos.attach(io: violin_file, filename: "violin.png", content_type: "image/png")
 instrument1.save
 
-# instrument2 = Instrument.create!(
-#   name: "Steinway Grand Piano",
-#   description: "Beautiful",
-#   price: 100,
-#   category: "pianos",
-#   photo_url: "piano2.jpeg",
-#   user: user1
-# )
+guitar_file = URI.open("https://plus.unsplash.com/premium_photo-1664194583959-c44d377a7835?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80")
 
-# instrument3 = Instrument.create!(
-#   name: "Electric Piano",
-#   description: "Beautiful",
-#   price: 15,
-#   category: "pianos",
-#   photo_url: "P.jpeg",
-#   user: user1
-# )
-
-# instrument4 = Instrument.create!(
-#   name: "Electric Guitar",
-#   description: "Beautiful",
-#   price: 10,
-#   category: "guitars",
-#   photo_url: "guitar.jpg",
-#   user: user1
-# )
-
-# instrument4 = Instrument.create!(
-#   name: "Violin",
-#   description: "Beautiful",
-#   price: 10,
-#   category: "guitars",
-#   photo_url: "Violin.jpg",
-#   user: user1
-# )
+instrument2 = Instrument.new(
+  name: "Electric Guitar",
+  description: "Beautiful",
+  price: 15,
+  category: "guitars",
+  user: user2
+)
+instrument2.photos.attach(io: guitar_file, filename: "guitar.png", content_type: "image/png")
+instrument2.save

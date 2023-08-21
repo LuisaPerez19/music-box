@@ -5,6 +5,12 @@
 <%= link_to "Edit", edit_instrument_path(@instrument.id) %>
 
 
+<% if @instrument.photos.attached? %>
+      <% @instrument.photos.each do |photo| %>
+        <%= cl_image_tag photo.key, height: 300, width:400, crop: :fill %>
+      <% end %>
+    <% end %>
+
 <%= link_to "Back to list", instruments_path %>
 
 <%= link_to "Delete",
