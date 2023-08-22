@@ -5,9 +5,9 @@
 <h1><%= @instrument.name %></h1>
  <small class="text-muted">£<%= @instrument.price %>/day</small>
 
-
+<% if @instrument.photo_url%>
 <%= image_tag @instrument.photo_url, alt: 'Instrument', class: "instrument-img rounded-top" %>
-
+<% end %>
 
 <br>
 <div class="btn-group btn-group-toggle" data-toggle="buttons" style="margin: 8px">
