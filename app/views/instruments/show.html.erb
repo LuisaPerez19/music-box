@@ -1,21 +1,64 @@
 <div class="container mt-5">
+  <div class="bg-white rounded p-3 shadow" style="min-height: 50vh">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-6">
+        <h1><%= @instrument.name %></h1>
+        <small class="text-muted">£<%= @instrument.price %>/day</small>
 
-<h1><%= @instrument.name %></h1>
+        <% if @instrument.photos.attached? %>
+          <% @instrument.photos.each do |photo| %>
+          <%= cl_image_tag photo.key, height: 300, width:400, crop: :fill %>
+          <% end %>
+        <% end %>
+        <br>
 
-<%= link_to "Edit", edit_instrument_path(@instrument.id) %>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons" style="margin: 8px">
+          <label class="btn btn-secondary active">
+            <input type="radio" name="options" id="option1" autocomplete="off" checked>
+          <%= link_to "Edit", edit_instrument_path(@instrument.id) %>
+          </label>
 
+          <label class="btn btn-secondary">
+            <input type="radio" name="options" id="option2" autocomplete="off">
+            <%= link_to "Back to list", instruments_path %>
+          </label>
 
-<% if @instrument.photos.attached? %>
-      <% @instrument.photos.each do |photo| %>
-        <%= cl_image_tag photo.key, height: 300, width:400, crop: :fill %>
-      <% end %>
-    <% end %>
+          <label class="btn btn-secondary">
+          <input type="radio" name="options" id="option3" autocomplete="off">
+          <%= link_to "Delete",
+            instrument_path(@instrument),
+            data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+          </label>
+        </div>
+      </div>
 
-<%= link_to "Back to list", instruments_path %>
+      <div class="col-12 col-lg-6">
+        <div class="row justify-content-center">
+          <h1> Desription </h1>
+            <p> <%= @instrument.description %>
+          <p>Native Instruments Komplete Kontrol A49 Midi Guitar</p>
 
-<%= link_to "Delete",
-  instrument_path(@instrument),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-%>
+          <div class="col-12 col-lg-3">
+          <p>Daily</p>
+          <p>£7.00/day</p>
+          </div>
 
+          <div class="col-12 col-lg-3">
+          <p>7 Days +</p>
+          <p>£4.00/day</p>
+          </div>
+
+          <div class="col-12 col-lg-3">
+          <p>30 Days +</p>
+          <p>£2.80/day</p>
+          </div>
+
+        </div>
+
+          <%= link_to 'Rent this instrument', new_instrument_booking_path(@instrument) %>
+
+      </div>
+
+    </div>
+  </div>
 </div>
