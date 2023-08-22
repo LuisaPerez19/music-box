@@ -3,12 +3,22 @@ class InstrumentsController < ApplicationController
     @instruments = Instrument.all
   end
 
+  def show
+    @instrument = Instrument.find(params[:id])
+  end
+
   def new
     @instrument = Instrument.new
   end
 
-  def show
-    @instrument = Instrument.find(params[:id])
+  def create
+    @instrument = Instrument.new(instrument_params)
+    @instrument.user = current_user
+    if @instrument.save
+      redirect_to instrument_path(@instrument)
+    else
+      render 'new', status: :unprocessable_entity
+    end
   end
 
   def edit
@@ -30,19 +40,9 @@ class InstrumentsController < ApplicationController
     redirect_to instruments_path, status: :see_other
   end
 
-  def create
-    @instrument = Instrument.new(instrument_params)
-    @instrument.user = current_user
-    if @instrument.save
-      redirect_to instrument_path(@instrument)
-    else
-      render 'new', status: :unprocessable_entity
-    end
-  end
-
   private
 
   def instrument_params
-    params.require(:instrument).permit(:name, :price, :description, :photo_url, :category)
+    params.require(:instrument).permit(:name, :price, :description, :category, photos: [])
   end
 end

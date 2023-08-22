@@ -6,8 +6,10 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+require "open-uri"
 
 puts 'Deleting existing records...'
+
 
 # Review.delete_all
 # Booking.delete_all
@@ -41,92 +43,31 @@ user4 = User.create!(
   password_confirmation: "123456"
 )
 
-instrument1 = Instrument.create!(
-  name: "Yamaha piano",
-  description: "Beautiful",
-  price: 40,
-  photo_url: "piano1.jpeg",
-  category: "pianos",
-  user: user1
-)
+violin_file = URI.open("https://images.unsplash.com/photo-1631541313073-ffe99712c629?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80")
 
-instrument2 = Instrument.create!(
-  name: "Steinway Grand Piano",
-  description: "Beautiful",
-  price: 100,
-  category: "pianos",
-  photo_url: "piano2.jpeg",
-  user: user1
-)ç
-
-instrument3 = Instrument.create!(
-  name: "Electric Piano",
-  description: "Beautiful",
-  price: 15,
-  category: "pianos",
-  photo_url: "electricpiano.png",
-  user: user1
-)
-
-instrument4 = Instrument.create!(
-  name: "Electric Guitar",
-  description: "Beautiful",
-  price: 50,
-  category: "guitars",
-  photo_url: "guitar.jpg",
-  user: user1
-)
-
-instrument4 = Instrument.create!(
+instrument1 = Instrument.new(
   name: "Violin",
   description: "Beautiful",
-  price: 30,
+
+  price: 20,
+  category: "Violins",
+
+  user: user1
+)
+instrument1.photos.attach(io: violin_file, filename: "violin.png", content_type: "image/png")
+instrument1.save
+
+
+guitar_file = URI.open("https://plus.unsplash.com/premium_photo-1664194583959-c44d377a7835?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80")
+
+instrument2 = Instrument.new(
+  name: "Electric Guitar",
+  description: "Beautiful",
+  price: 15,
+
   category: "guitars",
-  photo_url: "Violin.jpg",
-  user: user1
+  user: user2
 )
 
-instrument5 = Instrument.create!(
-  name: "Cello",
-  description: "Beautiful",
-  price: 40,
-  category: "cello",
-  photo_url: "cello2.jpg",
-  user: user1
-)
-
-instrument6 = Instrument.create!(
-  name: "Drum",
-  description: "Beautiful",
-  price: 100,
-  category: "cello",
-  photo_url: "drum.jpeg",
-  user: user1
-)
-
-  instrument7 = Instrument.create!(
-    name: "Banjo",
-    description: "Beautiful",
-    price: 20,
-    category: "cello",
-    photo_url: "banjo.jpeg",
-    user: user1
-  )
-
-  instrument8 = Instrument.create!(
-    name: "Saxophone",
-    description: "Beautiful",
-    price: 40,
-    category: "Sa",
-    photo_url: "sax.jpeg",
-    user: user1
-  )
-
-  instrument9 = Instrument.create!(
-    name: "Xylophone",
-    description: "Beautiful",
-    price: 70,
-    category: "Xylophone",
-    photo_url: "xa.jpeg",
-    user: user1
-  )
+instrument2.photos.attach(io: guitar_file, filename: "guitar.png", content_type: "image/png")
+instrument2.save
