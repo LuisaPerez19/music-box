@@ -3,6 +3,7 @@ class BookingsController < ApplicationController
   before_action :set_instrument, only: [:new, :create]
 
   def index
+    # @instrument = Booking.instrument
     @user = current_user
     @bookings = @user.bookings
   end
