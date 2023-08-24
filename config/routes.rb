@@ -5,10 +5,11 @@ Rails.application.routes.draw do
 
   resources :instruments do
     resources :bookings, only: [ :new, :create ]
-    # resources :reviews, only: [ :new, :create ]
+    resources :reviews, only: [ :new, :create]
   end
 
   resources :bookings, only: [ :show ]
+  resources :reviews, only: [ :show]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
