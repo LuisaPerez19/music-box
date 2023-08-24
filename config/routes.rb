@@ -4,11 +4,11 @@ Rails.application.routes.draw do
   # resources :instruments
 
   resources :instruments do
-    resources :bookings, only: [ :new, :create ]
+    resources :bookings, only: [:new, :create ]
     # resources :reviews, only: [ :new, :create ]
   end
 
-  resources :bookings, only: [ :show ]
+  resources :bookings, only: [:index,:show ]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

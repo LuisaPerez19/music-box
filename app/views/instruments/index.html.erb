@@ -1,9 +1,10 @@
 
 
-<span id="btn-new"><%= link_to "New Instrument", new_instrument_path, class: "btn btn-success" %></span
+<span id="btn-new"><%= link_to "New Instrument", new_instrument_path, class: "btn btn-success" %></span>
 
-<%= image_tag "musicbox.png", alt: 'logo', class: "rounded-circle"%> 
-<h2> Rent Instruments (Index Page) </h2>
+<span><%= link_to 'See all my bookings', bookings_path, class: "btn btn-success"  %></span>
+
+
 
 
 <div class="container py-5">
@@ -25,6 +26,7 @@
     <% end  %>
   </div>
 </div>
+
 <div>
-   <%= link_to "Homepage", root_path, class: "btn btn-success" %>
-   </div>
+  <%= link_to "Homepage", root_path, class: "btn btn-success" %>
+</div>
