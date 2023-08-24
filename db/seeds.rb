@@ -51,7 +51,7 @@ instrument1 = Instrument.new(
 
   price: 20,
   category: "Violins",
-
+  photo_url: violin_file,
   user: user1
 )
 instrument1.photos.attach(io: violin_file, filename: "violin.png", content_type: "image/png")
@@ -68,6 +68,22 @@ instrument2 = Instrument.new(
   category: "guitars",
   user: user2
 )
+
+
+instrument2.photos.attach(io: guitar_file, filename: "guitar.png", content_type: "image/png")
+instrument2.save
+
+music1_file = URI.open("https://th.bing.com/th/id/OIG.Y6rHl8vD8Cssm48KS0vX?pid=ImgGn")
+
+instrument3 = Instrument.new(
+  name: "Music1",
+  description: "Beautiful",
+  price: 15,
+
+  category: "guitars",
+  user: user2
+)
+
 
 instrument2.photos.attach(io: guitar_file, filename: "guitar.png", content_type: "image/png")
 instrument2.save
