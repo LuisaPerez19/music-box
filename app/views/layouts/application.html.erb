@@ -17,7 +17,7 @@
 
     <%= yield %>
     <% if user_signed_in?  %>
-    <h5>Hi <%= current_user.email %></h5>
+      <% current_user.email %>
     <% end %>
   </body>
 </html>

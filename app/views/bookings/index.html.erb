@@ -1,0 +1,30 @@
+
+
+<span> <%= link_to "Homepage", root_path, class: "button-green" %> </span>
+
+<span>  <%= link_to "Back to list", instruments_path, class: "button-blue"  %> </span>
+<div>
+  <h2 id="bookings-title">Bookings & Instruments</h2>
+
+  <div class="container py-5">
+    <% @bookings.each do |booking| %>
+    <div class= "card mt-4">
+      <div class="row">
+
+        <div class="col-md-4">
+          <%= cl_image_tag booking.instrument.photos.first.key, width: 296, crop: :fill, class: "instrument-img img-fluid" %>
+        </div>
+
+        <div class="col-md-8">
+          <p> <strong>Instrument: <%= booking.instrument.name %> </strong> </p>
+          <p> Price: £ <%= booking.instrument.price %>/day</p>
+          <p>Start Date: <%= booking.start_date %></p>
+          <p>End Date: <%= booking.end_date %></p>
+        </div>
+
+      </div>
+    </div>
+    <% end %>
+  </div>
+
+</div>
