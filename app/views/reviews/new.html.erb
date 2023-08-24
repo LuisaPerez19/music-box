@@ -1,0 +1,7 @@
+<h1>Instrument Review</h1>
+
+<div><%= simple_form_for [@instrument, @review] do |f| %>
+  <%= f.input :content %>
+  <%= f.submit "Submit Review", class: "btn btn-primary" %>
+<% end %>
+</div>

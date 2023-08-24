@@ -8,7 +8,14 @@
                 <p class="card-text">User: <%= current_user.email %></p>
                 <p class="card-text"> Booking Starts <%= @booking.start_date %></p>
                 <p class="card-text"> Booking End <%= @booking.end_date %></p>
+
                 <button id="goBackButton" class="btn btn-primary btn-sm">Go Back to Home</button>
             </div>
         </div>
     </div>
+
+<br>
+
+
+
+<%= link_to 'See all my bookings', bookings_path %>
