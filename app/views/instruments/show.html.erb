@@ -12,24 +12,28 @@
         <% end %>
         <br>
 
-        <div class="btn-group btn-group-toggle" data-toggle="buttons" style="margin: 8px">
-          <label class="btn btn-secondary active">
-            <input type="radio" name="options" id="option1" autocomplete="off" checked>
-          <%= link_to "Edit", edit_instrument_path(@instrument.id) %>
-          </label>
+        <div class="row justify-align-center">
 
-          <label class="btn btn-secondary">
-            <input type="radio" name="options" id="option2" autocomplete="off">
-            <%= link_to "Back to list", instruments_path %>
-          </label>
+ <div class="button-show" style="color: white; display: inline-block; width: 120px; height: 40px;">
+  <%= link_to "Edit", edit_instrument_path(@instrument.id), class: "button-green" %>
+</div>
 
-          <label class="btn btn-secondary">
-          <input type="radio" name="options" id="option3" autocomplete="off">
-          <%= link_to "Delete",
-            instrument_path(@instrument),
-            data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-          </label>
-        </div>
+
+ <div class="button-show" style="color: white; display: inline-block; width: 200px; height: 40px;">
+  <%= link_to "Back to list", instruments_path, class: "button-green" %>
+</div>
+
+ <div class="button-show" style="color: white; display: inline-block; width: 120px; height: 40px;">
+  <%= link_to "Delete",
+                  instrument_path(@instrument), class: "button-green",
+                  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+</div>
+
+
+</div>
+
+
+
       </div>
 
       <div class="col-12 col-lg-6">
