@@ -1,18 +1,18 @@
 
 <div class="row justify-content-center">
   <div class="col-sm-8 my-3">
-    <%= form_with url: instruments_path, method: :get, class: "d-flex" do %>
+      <%= form_tag instruments_path, method: :get, class: "d-flex" do %>
       <%= text_field_tag :query,
             params[:query],
             class: "form-control",
             placeholder: "Type a keyword"
         %>
-      <%= submit_tag "Search", name: "", class: "btn btn-primary button-search" %>
+      <%= submit_tag "Search", class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>
 
-<div class="container py-5">
+<div class="container py-4">
   <div class="row">
     <% @instruments.each do |instrument|%>
       <div class="co-12 col-sm-6 col-md-4 mb-3">
@@ -20,9 +20,9 @@
         <% if instrument.photos.attached? %>
           <%= cl_image_tag instrument.photos.first.key, width: 296, crop: :fill, class: "instrument-img img-fluid" %>
         <% end %>
-            <div class="p-3 rounded-bottom d-flex flex-column">
+            <div class="p-2 rounded-bottom d-flex flex-column">
             <%= link_to instrument_path(instrument), class:"text-decoration-none" do %>
-              <strong><%= instrument.name %></strong>
+              <strong class="name-color"><%= instrument.name %></strong>
               <small class="text-muted">£<%= instrument.price %>/day</small>
             </div>
             <% end %>
@@ -33,14 +33,14 @@
 </div>
 
 <div>
-<span id="btn-new"><%= link_to "New Instrument", new_instrument_path, class: "btn btn-success" %></span>
+<span id="btn-new"><%= link_to "New Instrument", new_instrument_path, class: "button-blue" %></span>
 
-<span><%= link_to 'See all my bookings', bookings_path, class: "btn btn-success"  %></span>
+<span><%= link_to 'See all my bookings', bookings_path, class: "button-green"  %></span>
 
 </div>
 
 <br>
 
 <div>
-  <%= link_to "Homepage", root_path, class: "btn btn-success" %>
+  <%= link_to "Homepage", root_path, class: "button-green" %>
 </div>

@@ -1,11 +1,9 @@
 class InstrumentsController < ApplicationController
   def index
-
     if params[:query].present?
-      @instruments = Instrument.search_by_name_and_category
-      (params[:query])
+      @instruments = Instrument.search_by_name_and_category(params[:query])
     else
-    @instruments = Instrument.all
+      @instruments = Instrument.all
     end
   end
 
