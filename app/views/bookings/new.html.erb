@@ -1,9 +1,12 @@
 <!-- app/views/bookings/new.html.erb -->
-<h1>Instrument Booking</h1>
+<div class="booking-form-container"> <!-- Add a container div -->
+  <h1>Instrument Booking</h1>
 
-<div><%= simple_form_for [@instrument, @booking] do |f| %>
-  <%= f.input :start_date %>
-  <%= f.input :end_date %>
-  <%= f.submit "Submit Booking", class: "btn button-blue" %>
-<% end %>
+  <div>
+    <%= simple_form_for [@instrument, @booking] do |f| %>
+      <%= f.input :start_date %>
+      <%= f.input :end_date %>
+      <%= f.submit "Submit Booking", class: "btn button-blue" %>
+    <% end %>
+  </div>
 </div>
