@@ -36,26 +36,14 @@
           <p><%= @instrument.description %></p>
           <p>Native Instruments Komplete Kontrol A49 Midi Guitar</p>
 
-          <div class="col-12 col-lg-3">
-            <p>Daily</p>
-            <p>£7.00/day</p>
-          </div>
 
-          <div class="col-12 col-lg-3">
-            <p>7 Days +</p>
-            <p>£4.00/day</p>
-          </div>
-
-          <div class="col-12 col-lg-3">
-            <p>30 Days +</p>
-            <p>£2.80/day</p>
-          </div>
-        </div>
-
-
-         <div class="row justify-align-center" style="color: white; display: inline-block; width: 250px; height: 40px; margin-left:-35px; margin-top:35px;">
+          <div class="row justify-align-center" style="color: white; display: inline-block; width: 250px; height: 40px; margin-left:-35px; margin-top:35px;">
             <%= link_to 'Rent this instrument', new_instrument_booking_path(@instrument), class: "button-blue" %>
           </div>
+
+
+
+
 
           <div style="color: grey">
           <% if @instrument.reviews.blank? %>
@@ -66,6 +54,7 @@
             <% end %>
           <% end %>
           </div>
+
 
 
           <div>
