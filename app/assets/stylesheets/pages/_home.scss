@@ -1,1 +1,16 @@
 // Specific CSS for your home-page
+.banner {
+  position: relative;
+}
+
+.button-container {
+  display: flex;
+  position: absolute;
+  top: 300px;
+  right: 600px;
+}
+
+.button-container > #btn-new {
+  margin-top: 0;
+  padding-left: 0;
+}

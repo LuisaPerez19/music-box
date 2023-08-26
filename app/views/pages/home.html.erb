@@ -3,10 +3,11 @@
 <%# <%= image_tag "musicbox.png", alt: 'logo', class: "rounded-circle"  %>
 
 <div class="speaker"> 
-<%= image_tag "speaker4.png", class: "banner" , style: "width: 1450px" %>
-
-    <span id="btn-new"><%= link_to "List Instrument", new_instrument_path, class: "button-blue" %></span>
-    <span id="btn-rent"><%= link_to "Rent Instrument", instruments_path, class: "button-blue" %></span>
+    <%= image_tag "speaker4.png", class: "banner" , style: "width: 1450px" %>
+    <div class="button-container">
+        <span id="btn-new"><%= link_to "List an Instrument", new_instrument_path, class: "button-blue list-instrument" %></span>
+        <span id="btn-rent"><%= link_to "Rent your Instrument", instruments_path, class: "button-blue rent-instrument" %></span>
+    </div>
 </div>
 
 
