@@ -1,13 +1,23 @@
 
-<%= image_tag "musicbox.png", alt: 'logo', class: "rounded-circle"%>
 
-<div> 
+<%# <%= image_tag "musicbox.png", alt: 'logo', class: "rounded-circle"  %>
+
+<div class="speaker"> 
 <%= image_tag "speaker4.png", class: "banner" , style: "width: 1450px" %>
+
+    <span id="btn-new"><%= link_to "List Instrument", new_instrument_path, class: "button-blue" %></span>
+    <span id="btn-rent"><%= link_to "Rent Instrument", instruments_path, class: "button-blue" %></span>
 </div>
 
-<br>
 
-<span id="btn-new"><%= link_to "List Instrument", new_instrument_path, class: "btn btn-success" %></span>
-<span id="btn-new"><%= link_to "Rent Instrument", instruments_path, class: "btn btn-success" %></span>
+<%# Make the music images boxes beneath the main banner %>
+<div class="square-image-container">
+    <%= image_tag "music3.jpeg", alt: 'logo', class: "square-music-image" %>
+    <%= image_tag "music2.jpeg", alt: 'logo', class: "square-music-image" %>
+    <%= image_tag "music4.jpeg", alt: 'logo', class: "square-music-image" %>
+    <%= image_tag "music5.jpeg", alt: 'logo', class: "square-music-image" %>
+    <%= image_tag "trumpet.jpeg", alt: 'logo', class: "square-music-image" %>
+    <%= image_tag "piano.jpeg", alt: 'logo', class: "square-music-image" %>
+</div>
 
 
