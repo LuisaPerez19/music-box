@@ -3,3 +3,31 @@
   height: 100px;
   border-radius: 50%;
 }
+
+.square-music-image {
+  width: 440px;
+  height: 420px;
+
+  // border-radius: 50%;
+}
+
+// .square-image-container {
+//   margin-top: 10px;
+//   margin-bottom: 100px;
+// }
+
+.square-image-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-wrap: wrap; /* Allow images to wrap if container is not wide enough */
+  margin-top: 10px;
+  margin-bottom: 100px;
+}
+
+.square-music-image {
+  width: 465px;
+  height: 420px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}

@@ -10,8 +10,19 @@
   padding-left: 40px;
 }
 
-.button-green {
-  background-color: aqua;
+.button-blue {
+  background-color: rgb(17, 0, 128);
   text-decoration: none;
-  color: white;
+  color: rgb(255, 255, 255);
+  align-items: center;
+  font-size: 18px; /* Increase font size for bigger button */
+  padding: 10px 20px; /* Increase padding for bigger button */
+  margin-left: 100px;
+  margin-top: 200px;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+}
+
+.speaker {
+  background-image: url(app/assets/images/speaker4.png);
 }
