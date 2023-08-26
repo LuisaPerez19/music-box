@@ -11,8 +11,8 @@ require "open-uri"
 puts 'Deleting existing records...'
 
 
-# Review.delete_all
-# Booking.delete_all
+Review.delete_all
+Booking.delete_all
 Instrument.delete_all
 User.delete_all
 
@@ -48,7 +48,6 @@ violin_file = URI.open("https://images.unsplash.com/photo-1631541313073-ffe99712
 instrument1 = Instrument.new(
   name: "Violin",
   description: "Beautiful",
-
   price: 20,
   category: "Violins",
   photo_url: violin_file,
@@ -64,26 +63,44 @@ instrument2 = Instrument.new(
   name: "Electric Guitar",
   description: "Beautiful",
   price: 15,
-
   category: "guitars",
   user: user2
 )
-
-
 instrument2.photos.attach(io: guitar_file, filename: "guitar.png", content_type: "image/png")
 instrument2.save
 
-music1_file = URI.open("https://th.bing.com/th/id/OIG.Y6rHl8vD8Cssm48KS0vX?pid=ImgGn")
+piano_file = URI.open("https://images.unsplash.com/photo-1690577276733-71c98d0e65e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80")
 
 instrument3 = Instrument.new(
-  name: "Music1",
-  description: "Beautiful",
-  price: 15,
-
-  category: "guitars",
+  name: "Steinway Grand Piano",
+  description: "Elevate your musical journey with the renowned Steinway Grand Piano's classic charm and rich tones. Rent today, and let its remarkable sound inspire your melodies.",
+  price: 300,
+  category: "pianos",
   user: user2
 )
+instrument3.photos.attach(io: piano_file, filename: "piano.png", content_type: "image/png")
+instrument3.save
 
+drums =  URI.open("https://images.unsplash.com/photo-1543443258-92b04ad5ec6b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80")
+instrument4 = Instrument.new(
+  name: "Pearl Drum Kit",
+  description: "Peral Export 4 Piece Drum Kit in Cobalt Mist",
+  price: 20,
+  category: "drums",
+  user: user1
+)
+instrument4.photos.attach(io: drums, filename: "guitar.png", content_type: "image/png")
+instrument4.save
 
-instrument2.photos.attach(io: guitar_file, filename: "guitar.png", content_type: "image/png")
-instrument2.save
+banjo =  URI.open("https://images.unsplash.com/photo-1628434285435-935b8c9328be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80")
+instrument5 = Instrument.new(
+  name: "Banjo",
+  description: "Rent a classic banjo to bring vibrant folk and bluegrass vibes to your music. Easy and enjoyable for all skill levels, our banjo promises an authentic and playful sound. Discover the joy of strumming this traditional instrument.",
+  price: 20,
+  category: "banjos",
+  user: user1
+)
+instrument5.photos.attach(io: banjo, filename: "banjo.png", content_type: "image/png")
+instrument5.save
+
+puts 'finish'
