@@ -1,0 +1,56 @@
+/* Your existing styles */
+
+/* Footer styles */
+.wide-footer {
+  background-color: #f4f4f4;
+  padding: 20px 0;
+  width: 100%;
+  color: #2F3ECE; /* Set text color for the entire footer */
+  text-align: center; /* Center-align the footer content */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.social-media-icons {
+  margin-top: 10px;
+}
+
+.social-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  margin-right: 10px;
+}
+
+
+
+.social-icon.facebook {
+  background-image: url('/assets/icons8-facebook-48.png'); /* Use the correct path */
+}
+
+.social-icon.twitter {
+  background-image: url('/assets/icons8-instagram-48.png'); /* Use the correct path */
+}
+
+.social-icon.instagram {
+  background-image: url('/assets/icons8-twitterx-24.png'); /* Use the correct path */
+}
+
+/* Your existing styles */
+
+.footer-links {
+  list-style: none;
+  padding: 2;
+  margin: 0;
+}
+
+.footer-links li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+/* Your existing styles */

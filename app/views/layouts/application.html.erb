@@ -15,9 +15,11 @@
 
     <%= render "shared/flashes" %>
 
+
     <%= yield %>
     <% if user_signed_in?  %>
       <% current_user.email %>
     <% end %>
+    <%= render 'shared/footer' %> <!-- Render the footer partial -->
   </body>
 </html>
