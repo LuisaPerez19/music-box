@@ -2,23 +2,21 @@
 
 <%# <%= image_tag "musicbox.png", alt: 'logo', class: "rounded-circle"  %>
 
-<div class="speaker"> 
-    <%= image_tag "speaker4.png", class: "banner" , style: "width: 1450px" %>
-    <div class="button-container">
-        <span id="btn-new"><%= link_to "List an Instrument", new_instrument_path, class: "button-blue list-instrument" %></span>
-        <span id="btn-rent"><%= link_to "Rent your Instrument", instruments_path, class: "button-blue rent-instrument" %></span>
-    </div>
+<div class="speaker" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path("hamonbxoeqrdacdyeua8") %>');">
+  <div class="speaker-info">
+    <h1>Welcome to <strong>Music Box</strong>!</h1>
+    <span id="btn-new"><%= link_to "List an Instrument", new_instrument_path, class: "button-blue list-instrument" %></span>
+    <span id="btn-rent"><%= link_to "Rent your Instrument", instruments_path, class: "button-blue rent-instrument" %></span>
+  </div>
 </div>
 
 
 <%# Make the music images boxes beneath the main banner %>
 <div class="square-image-container">
-    <%= image_tag "music3.jpeg", alt: 'logo', class: "square-music-image" %>
-    <%= image_tag "music2.jpeg", alt: 'logo', class: "square-music-image" %>
-    <%= image_tag "music4.jpeg", alt: 'logo', class: "square-music-image" %>
-    <%= image_tag "music5.jpeg", alt: 'logo', class: "square-music-image" %>
-    <%= image_tag "trumpet.jpeg", alt: 'logo', class: "square-music-image" %>
-    <%= image_tag "piano.jpeg", alt: 'logo', class: "square-music-image" %>
+    <%= cl_image_tag "fvmod9gmyhojf0pliun3", alt: 'logo', class: "square-music-image" %>
+    <%= cl_image_tag "hnexogjtk799hepjxzaf", alt: 'logo', class: "square-music-image" %>
+    <%= cl_image_tag "mwweeeokn9c7o8lfr4rk", alt: 'logo', class: "square-music-image" %>
+    <%= cl_image_tag "vtwwwfjiozuzbmoi9eeq", alt: 'logo', class: "square-music-image" %>
+    <%= cl_image_tag "uavrpvuuqrb9fvbteypu", alt: 'logo', class: "square-music-image" %>
+    <%= cl_image_tag "ztq9rpmvamf4r6nx1ino", alt: 'logo', class: "square-music-image" %>
 </div>
-
-
