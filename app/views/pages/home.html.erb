@@ -1,7 +1,7 @@
 
 
 <%# <%= image_tag "musicbox.png", alt: 'logo', class: "rounded-circle"  %>
-
+<section>
 <div class="speaker" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1506157786151-b8491531f063?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');">
   <div class="speaker-info">
     <h1>Welcome to <strong>Music Box</strong>!</h1>
@@ -9,14 +9,22 @@
     <span id="btn-rent"><%= link_to "Rent your Instrument", instruments_path, class: "button-blue rent-instrument" %></span>
   </div>
 </div>
-
+</section>
 
 <%# Make the music images boxes beneath the main banner %>
-<div class="square-image-container">
-    <%= cl_image_tag "fvmod9gmyhojf0pliun3", alt: 'logo', class: "square-music-image" %>
-    <%= cl_image_tag "hnexogjtk799hepjxzaf", alt: 'logo', class: "square-music-image" %>
-    <%= cl_image_tag "mwweeeokn9c7o8lfr4rk", alt: 'logo', class: "square-music-image" %>
-    <%= cl_image_tag "vtwwwfjiozuzbmoi9eeq", alt: 'logo', class: "square-music-image" %>
-    <%= cl_image_tag "uavrpvuuqrb9fvbteypu", alt: 'logo', class: "square-music-image" %>
-    <%= cl_image_tag "ztq9rpmvamf4r6nx1ino", alt: 'logo', class: "square-music-image" %>
+<section class="gallery-page">
+<%# <h2 class="gallery-title">Our gallery of the instruments</h2> %>
+<div class="wraper">
+<div class="gallery">
+<%# <div class="square-image-container"> %>
+<%# <button class="gallery-modal-btn" data-micromodal-trigger="modal" data-index="0"> %>
+    <%# <%= cl_image_tag "fvmod9gmyhojf0pliun3", alt: 'logo', class: "square-music-image" %>
+    <%# <%= cl_image_tag "hnexogjtk799hepjxzaf", alt: 'logo', class: "square-music-image" %>
+    <%# <%= cl_image_tag "mwweeeokn9c7o8lfr4rk", alt: 'logo', class: "square-music-image" %>
+    <%# <%= cl_image_tag "vtwwwfjiozuzbmoi9eeq", alt: 'logo', class: "square-music-image" %>
+    <%# <%= cl_image_tag "uavrpvuuqrb9fvbteypu", alt: 'logo', class: "square-music-image" %>
+    <%# <%= cl_image_tag "ztq9rpmvamf4r6nx1ino", alt: 'logo', class: "square-music-image" %>
 </div>
+</div>
+</div>
+</section>
